@@ -1,0 +1,18 @@
+model_list:
+  - model_name: gpt-4o
+    litellm_params:
+      model: gpt-4o
+      api_key: os.environ/OPENAI_API_KEY
+  - model_name: gpt-4o-mini
+    litellm_params:
+      model: gpt-4o-mini
+      api_key: os.environ/OPENAI_API_KEY
+
+general_settings:
+  master_key: "[litellm-example-key]"
+
+environment_variables:
+  OPENAI_API_KEY: "[openaip-key]"
+
+litellm_settings:
+  callbacks: ai_defense_hook.proxy_handler_instance
